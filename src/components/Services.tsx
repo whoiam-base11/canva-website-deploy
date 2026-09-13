@@ -30,7 +30,7 @@ export default function Services() {
               <h3 className="mt-16 text-[31px] font-bold text-gray-800 text-center">
                 {service.title}
               </h3>
-              <a href="#" className="mt-16 text-xl text-gray-500 hover:text-gray-800 border border-black px-6 py-2 transition-colors">
+              <a href="/service" className="mt-16 text-xl text-gray-500 hover:text-gray-800 border border-black px-6 py-2 transition-colors">
                 詳細を確認する→
               </a>
             </div>

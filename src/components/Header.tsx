@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -13,15 +13,27 @@ const navLinks = [
 
 export default function Header({
   variant = "dark",
+  fixed = false,
 }: {
   variant?: "dark" | "light";
+  fixed?: boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(fixed);
 
-  const textColor = variant === "dark" ? "text-white" : "text-gray-900";
+  useEffect(() => {
+    if (fixed) return;
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [fixed]);
+
+  const textColor = scrolled ? "text-black" : "text-white";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-15 py-24">
+    <header className={`fixed top-0 left-0 right-0 z-50 px-15 transition-all duration-300 ${scrolled ? "bg-white pt-6 pb-3" : "py-24"}`}>
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <a href="/" className="flex items-center gap-2">
           <span
@@ -53,12 +65,12 @@ export default function Header({
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-navy/95 z-40 flex items-center justify-center">
-          <nav className="flex flex-col items-center gap-8">
+        <div className="fixed inset-0 bg-white z-40 flex items-center justify-center">
+          <nav className="flex flex-col items-center gap-16">
             <a
               href="/"
               onClick={() => setIsOpen(false)}
-              className="text-white text-2xl tracking-widest hover:text-accent transition-colors"
+              className="text-black text-[1.95rem] font-bold tracking-widest hover:opacity-60 transition-opacity"
             >
               Top
             </a>
@@ -67,7 +79,7 @@ export default function Header({
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-white text-2xl tracking-widest hover:text-accent transition-colors"
+                className="text-black text-[1.95rem] font-bold tracking-widest hover:opacity-60 transition-opacity"
               >
                 {link.label}
               </a>
@@ -75,11 +87,11 @@ export default function Header({
             <a
               href="#"
               onClick={() => setIsOpen(false)}
-              className="text-white hover:text-accent transition-colors mt-4"
+              className="text-black hover:opacity-60 transition-opacity mt-4"
               aria-label="Instagram"
             >
               <svg
-                className="w-6 h-6"
+                className="w-12 h-12"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

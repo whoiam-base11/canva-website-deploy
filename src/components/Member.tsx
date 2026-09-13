@@ -51,7 +51,7 @@ export default function Member() {
               </svg>
             </a>
             <a
-              href="/message"
+              href="/about"
               className="ml-16 border border-gray-800 text-gray-800 px-12 py-3 text-lg whitespace-nowrap hover:bg-gray-800 hover:text-white transition-colors"
             >
               代表の想い→

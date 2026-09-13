@@ -9,28 +9,28 @@ export default function Outline() {
               <th className="py-8 pr-8 text-left text-[30px] font-bold text-gray-900 w-56 align-top">
                 会社名
               </th>
-              <td className="py-8 text-[30px] text-gray-800">C.E.I.P</td>
+              <td className="py-8 text-[30px] font-bold text-gray-800">C.I.E.P</td>
             </tr>
             <tr>
               <th className="py-8 pr-8 text-left text-[30px] font-bold text-gray-900 w-56 align-top">
                 設立
               </th>
-              <td className="py-8 text-[30px] text-gray-800">2024年10月1日</td>
+              <td className="py-8 text-[30px] font-bold text-gray-800">2025年4月3日</td>
             </tr>
             <tr>
               <th className="py-8 pr-8 text-left text-[30px] font-bold text-gray-900 w-56 align-top">
                 代表
               </th>
-              <td className="py-8 text-[30px] text-gray-800">本多 真雄人</td>
+              <td className="py-8 text-[30px] font-bold text-gray-800">本多 真雄人</td>
             </tr>
             <tr>
               <th className="py-8 pr-8 text-left text-[30px] font-bold text-gray-900 w-56 align-top">
                 連絡先
               </th>
-              <td className="py-8 text-[30px] text-gray-800">
+              <td className="py-8 text-[30px] font-bold text-gray-800">
                 <div className="flex flex-col gap-16">
-                  <span>000-0000-000</span>
-                  <span>ceo.maoto@gmail.com</span>
+                  <span>070-3794-4181</span>
+                  <span>ciep.maoto@gmail.com</span>
                 </div>
               </td>
             </tr>

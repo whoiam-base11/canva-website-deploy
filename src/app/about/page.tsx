@@ -1,118 +1,112 @@
 import Header from "@/components/Header";
-import ContactCta from "@/components/ContactCta";
-import SubpageFooter from "@/components/SubpageFooter";
+import Outline from "@/components/Outline";
+import Footer from "@/components/Footer";
 
-const stories = [
+const sections = [
   {
     heading: "-子どもの頃から「目的のない寄り道」が好き",
     paragraphs: [
-      "子どもの頃から「目的のない寄り道」が好きだった。目的があるわけでもなく、ただなんとなく気になった路地に入ってみたり、知らない公園に立ち寄ってみたり。寄り道の先には、いつも小さな発見があった。",
-      "大人になっても、その感覚は変わらなかった。「やるべきこと」に追われながらも、ふとした瞬間に横道に逸れてしまう。でも不思議なことに、その寄り道が、後から振り返ると一番大切な経験になっていたりする。",
-      "寄り道とは、「何かを探している自分」に気づく行為なのかもしれない。目的がないからこそ、純粋に心が動く方へ足が向く。そこに、自分でも気づいていなかった「好き」が隠れている。",
+      "子どもの頃から「目的のない寄り道」が好き\n夏目さんは現在28歳。フィルムカメラを片手に街を歩き、見過ごされがちな風景を写真と言葉で紡ぎ出していま\nす。被写体になるのは、絶景や有名な観光地ではなく、路地裏の自動販売機や、開かないシャッター、見知らぬ\n交差点などです。",
+      "夏目さん： 「子どもの頃から、学校からの帰り道にまっすぐ帰らない子だったんですよ。通学路から一本外れた\n細い道に入ってみたり、知らないアパートの階段の形をぼーっと眺めたり。 一緒に帰っていた友達には『早く帰\nろうよ』って呆れられていたんですけど、その誰も気にも留めない景色の中に、自分だけが知っている秘密基地\nを見つけたような気がして。 \"目的のない寄り道\" の時間がすごく好きだったんです」\n大学卒業後は、都内のIT企業で企画営業として就職。毎日パソコンと数字に向き合う日々の中で、少しずつ息苦\nしさを感じるようになったと言います。",
+      "夏目さん： 「効率や成果ばかりが求められる世界で、常に『正解』を出さなきゃいけないプレッシャーがありま\nした。自分のペースで歩くことが許されず、ベルトコンベアに乗せられているような感覚というか……。そのう\nち、休日は家から一歩も出られなくなってしまった時期もありました」",
     ],
+    image: "about-photo-1.jpg",
   },
   {
-    heading: "-初めての文字フリマ、見知らぬ隣の人と「好き」が重なって",
+    heading: "-初めての文学フリマ。見知らぬ誰かと「好き」が重なって",
     paragraphs: [
-      "それは突然のことだった。初めて出店した文字フリマで、隣のブースの人と話すうちに、お互いの「好き」が驚くほど重なっていることに気づいた。ジャンルは違うのに、根っこにある想いは同じだった。",
-      "「表現したい」という衝動。「誰かに届けたい」という願い。言葉にすると陳腐に聞こえるかもしれないけれど、その場で交わした会話には、確かな熱量があった。",
-      "あの日の出会いが、今の自分の原点になっている。一人では見つけられなかった景色を、誰かと一緒に見ることができる。それが「表現」の力なのだと、あの時初めて実感した。",
+      "そんな社会人3年目の春、夏目さんはふと立ち寄ったリサイクルショップで、古いフィルムカメラに出会います。\nなんとなく惹かれて購入し、あてもなく街を歩き始めました。",
+      "夏目さん： 「本当にただの気分転換でした。キャップを被って、ラフなTシャツを着て。行きつけのコーヒーロー\nスターの窓際とか、自販機の前に並ぶ見慣れないジュースとかを、ただカシャッ、カシャッと撮るだけ。 でも、\n現像から上がってきた写真を見た時、私が毎日『退屈だ』と思って歩いていた街が、すごく愛おしいものに見えた\nんです。光の加減とか、ちょっとピントが甘いところとかも含めて」",
+      "撮りためた写真に短い文章を添え、コンビニのコピー機で印刷してホチキスで留めた、たった10ページの小さな\n冊子。それが初めてのZINEでした。それを「文学フリマ」という個人出店のイベントで販売してみたところ、思\nいがけない出来事が起こります。",
+      "夏目さん： 「誰も買ってくれないだろうなと思っていたら、ふらっと立ち止まった同世代くらいの女の子が、『こ\nのシャッターの前の写真、すごくホッとします』と言って、買ってくれたんです。 私が見つけた小さな『好き』\nが、全く違う誰かの心にスッと重なった瞬間でした。効率や正解とは無縁のところで、人と人がつながれた気が\nしたんですかね」",
     ],
+    image: "about-photo-2.jpg",
   },
   {
     heading: "-それぞれが、自分だけの余白を見つけていける",
     paragraphs: [
-      "かつて「正解」を求めて走っていた時期がある。そんな時期が終わり、立ち止まって周りを見渡したとき、世界は思っていたよりもずっと広かった。",
-      "正解なんてなかった。あったのは、それぞれの「余白」だった。余白とは、自由に描ける空間のこと。誰かに決められるものではなく、自分で見つけるもの。",
-      "だからこそ、私たちは「余白」を大切にしたい。効率や成果だけでは測れない、一人ひとりの可能性が息づく場所。そんな余白を、一緒に見つけていける存在でありたい。",
+      "かつては「正解」を求めて苦しんでいた夏目さん。そんな彼女が、写真とZINEという表現方法にとりわけ強く惹\nかれた、その理由は一体何だったのでしょう。",
+      "夏目さん： 「写真やエッセイって、『これが答えです』って無理やり押し付けないところがいいんです。とくに私\nが撮るような日常の風景には、強烈なメッセージはありません。作り手にも、読み手にも、解釈の『余白』があっ\nて、その余白をそれぞれが自分のペースで埋めていくところがいいなあ、と。 街そのものもそうですよね。ただ\nベンチに座ってコーヒーを飲んでいる人がいれば、スマホで地図を睨んでいる人もいる。誰もが自分のままでいら\nれる、不思議な \"余白\" が街にはあるんです。そういう意味では、私の作っているものは、少しだけやさしい居場\n所なのかもしれません」",
+      "ZINEづくりを本業にしたいと周囲に相談した時、心配した友人からは「それで生活していけるの？」と反対に近\nい声も上がりました。一度は思いとどまり、会社員を続けながら細々と制作を続けていました。 しかし数年後、\n自分が初めて写真を撮ったあのコーヒーロースターが閉店するという知らせを聞きます。\n夏目さん： 「すごくショックでした。当たり前にあると思っていた風景は、いつか無くなってしまうんだって痛\n感して。 やっぱり私は、この変わりゆく街の何気ない瞬間を残していく人になりたい。その気持ちをごまかしき\nれなくなりました」",
     ],
+    image: "about-photo-3.jpg",
   },
   {
-    heading: "-とっさに出た「フィルム、全部ください」という言葉",
+    heading: "-とっさに出た「フィルム、全部ください！」という言葉",
     paragraphs: [
-      "写真屋の閉店セールで、とっさに口をついて出た言葉だった。「フィルム、全部ください」。自分でも驚いた。でも、その瞬間に確信した。自分はまだ「撮りたい」のだと。",
-      "デジタルの時代に、フィルムで撮ることに合理的な理由はない。でも、シャッターを切る瞬間の緊張感、現像を待つ時間のわくわく、そして仕上がりを見た時の驚き。そのすべてが、自分にとっては「リアル」だった。",
-      "効率では測れない価値がある。数字では表せない豊かさがある。人の手で、人の感性で、一つひとつ丁寧に積み上げていく。それが、私たちの信じる「ものづくり」の形です。",
+      "本格的に活動を始めるため、夏目さんは退職を決意。最後に背中を押したのは、カメラ屋さんでのちょっとした\n「間抜けな」出来事でした。",
+      "夏目さん： 「会社に退職届を出す前日、すごく緊張していて。気を紛らわそうと近所の小さなカメラ屋さんに入\nったんです。ただ見るだけのつもりだったのに、無骨な店主のおじいさんとバチッと目が合ってしまって。 何か\n買わなきゃ！と焦って、店主が口を開く前にとっさに出た言葉が『棚にあるフィルム、全部ください！』だったん\nです（笑）」",
+      "夏目さん： 「おじいさんは目を丸くして『そんなに撮るのかい？』って。でも、その言葉を聞いてハッとしたん\nです。『そうだ、私はこれから、このフィルム全部を使い切るくらい、街を撮って生きていくんだ』って。今考え\nると、あの日はすごく不自然な間（ま）の入り方をしたと思います。でも、あのとっさの勢いがなかったら、今の\n私はいないかもしれません」",
+      "インタビュー中、夏目さんが何度も口にした \"ファインダー越しの間（ま）\" とは、一体どんなもの？ さらには\nそれをどのようにして言葉に変えていくのか、第2話で聞かせてもらいます。",
     ],
+    image: "about-photo-4.jpg",
   },
 ];
-
-const bio = {
-  title: "【生い立ち】本多についての話",
-  paragraphs: [
-    "本多（ほんだ）は1998年生まれ。幼少期から絵を描くことと写真を撮ることが好きで、中学時代には独学でWebサイトを作り始めた。高校では写真部に所属し、フィルムカメラの魅力に取り憑かれる。",
-    "大学では情報デザインを専攻。在学中にフリーランスとしてWeb制作を始め、卒業後はIT企業でUXデザイナーとして経験を積む。2025年4月、「人の手で表現と挑戦に革新を」をミッションに掲げ、C.I.E.Pを設立。",
-    "趣味はフィルム写真、文字フリマへの出店、目的のない散歩。好きな言葉は「寄り道こそ本道」。",
-  ],
-};
 
 export default function AboutPage() {
   return (
     <>
-      <Header variant="light" />
+      <Header fixed />
       <main>
-        {/* Hero */}
-        <section className="pt-24 pb-0 px-6 bg-white">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-sm text-gray-500">想い</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-wider mt-1">
-              Message
-            </h1>
-          </div>
-        </section>
+        {sections.map((section, i) => (
+          <div key={i}>
+            {/* 写真セクション */}
+            <section className="min-h-screen flex items-center justify-center bg-white px-48 py-24 relative">
+              {i === 0 && (
+                <div className="absolute top-36 left-36 flex flex-col">
+                  <span className="text-xl text-black">想い-</span>
+                  <span className="text-[1.875rem] font-bold text-black">Message</span>
+                </div>
+              )}
+              <div className="relative w-[84%] h-[28.8rem] mx-auto bg-gradient-to-b from-sky-200 via-green-300 to-green-500">
+                <span className="absolute inset-0 flex items-center justify-center text-white/60 text-lg">
+                  {section.image}
+                </span>
+              </div>
+            </section>
 
-        {/* Hero Landscape */}
-        <div className="mt-12 w-full">
-          {/* 画像プレースホルダー - 実画像配置時は next/image の <Image> に差し替え */}
-          <div className="relative w-full h-48 md:h-72 bg-gradient-to-b from-sky-200 via-green-300 to-green-500">
-            <span className="absolute inset-0 flex items-center justify-center text-white/60 text-sm">
-              about-landscape-hero.jpg
-            </span>
-          </div>
-        </div>
-
-        {/* Story Sections */}
-        {stories.map((story, i) => (
-          <section key={i}>
-            <div className="py-20 px-6 bg-white">
-              <div className="max-w-3xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed mb-8">
-                  {story.heading}
+            {/* テキストセクション */}
+            <section className="min-h-screen flex items-center justify-center px-6 bg-white">
+              <div className="py-24">
+                <h2 className="text-[1.2rem] md:text-[1.8rem] font-bold text-black leading-relaxed mb-12">
+                  {section.heading}
                 </h2>
-                <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
-                  {story.paragraphs.map((p, j) => (
+                <div className="space-y-6 text-lg text-black leading-snug whitespace-pre-line">
+                  {section.paragraphs.map((p, j) => (
                     <p key={j}>{p}</p>
                   ))}
                 </div>
               </div>
-            </div>
-            {/* 風景イラスト */}
-            {/* 画像プレースホルダー - 実画像配置時は next/image の <Image> に差し替え */}
-            <div className="relative w-full h-40 md:h-64 bg-gradient-to-b from-sky-200 via-green-300 to-green-500">
-              <span className="absolute inset-0 flex items-center justify-center text-white/60 text-sm">
-                about-landscape-{i + 1}.jpg
-              </span>
-            </div>
-          </section>
+            </section>
+          </div>
         ))}
 
-        {/* Bio */}
-        <section className="py-20 px-6 bg-white">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-lg font-bold text-gray-900 mb-6">
-              {bio.title}
-            </h2>
-            <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
-              {bio.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
+        {/* Credits */}
+        <section className="py-24 px-6 bg-white">
+          <div className="max-w-4xl mx-auto space-y-8 text-lg text-black leading-snug whitespace-pre-line">
+            <p>【写真】馬場わかな<br />もくじ<br />第1話（3月30日） 何気ない街の風景に、自分だけの「特別」を見つける。そんな寄り道の余白に惹かれました（ZINEクリエイター・夏目紬さん）<br />第2話（3月31日） ファインダー越しに学んだ「待つこと」の大切さとは？（ZINEクリエイター・夏目紬さん）<br />第3話（4月1日） 日常を面白がるのも、味わうのも、少しだけ視点をずらすことです（ZINEクリエイター・夏目紬さん）</p>
+            <p>夏目 紬（なつめ つむぎ） 1998年生まれ。神奈川県出身。大学卒業後、IT企業での勤務を経て、2021年よりフリーランスの写真家・ZINEクリエイターとして活動を開始。何気ない街の風景とエッセイを交えたZINE『交差点とコーヒー』シリーズがSNS等で話題を集める。都内を中心に個展も開催。2026年秋、初の単行本エッセイを出版予定。 Instagram：@tsumugi_n_everyday</p>
           </div>
         </section>
 
-        <ContactCta />
+        {/* Contact */}
+        <section className="py-12 px-6 bg-white flex justify-center">
+          <a
+            href="/contact"
+            className="border-2 border-black w-[59.4rem] h-[11rem] pl-12 pr-12 text-black bg-gray-100 inline-flex items-center gap-6 transition-transform duration-200 hover:scale-95"
+          >
+            <div className="flex flex-col gap-4">
+              <span className="text-5xl font-bold">contact</span>
+              <span className="text-2xl">お問い合わせはこちら</span>
+            </div>
+            <span className="text-2xl text-left self-end mb-10">企業様や取材のご依頼は<br />こちらより気軽にお問い合わせください。</span>
+            <span className="ml-auto bg-black rounded-full w-14 h-14 flex items-center justify-center shrink-0">
+              <span className="text-white text-3xl font-bold leading-none" style={{ WebkitTextStroke: "2px white" }}>→</span>
+            </span>
+          </a>
+        </section>
       </main>
-      <SubpageFooter />
+      <Footer />
     </>
   );
 }
