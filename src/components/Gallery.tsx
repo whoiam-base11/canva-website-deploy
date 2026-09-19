@@ -18,10 +18,10 @@ const marqueeImages = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="relative h-screen flex flex-col justify-center overflow-hidden bg-white">
+    <section id="gallery" className="section-divider relative h-screen max-md:min-h-screen max-md:h-auto max-md:py-16 flex flex-col justify-center overflow-hidden bg-white">
       {/* 上部: 左に画像、右にテキスト */}
-      <div className="max-w-5xl mx-auto w-full px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div className="relative aspect-[2/3] w-1/2 ml-auto mr-8 bg-gray-300">
+      <div className="max-w-5xl mx-auto w-full px-6 max-md:px-4 grid md:grid-cols-2 gap-12 max-md:gap-8 items-center">
+        <div className="relative aspect-[2/3] w-1/2 ml-auto mr-8 bg-gray-300 max-md:w-2/3 max-md:mx-auto max-md:mr-auto">
           <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
             gallery-main.jpg
           </span>
@@ -49,7 +49,7 @@ export default function Gallery() {
           {[...marqueeImages, ...marqueeImages].map((img, i) => (
             <div
               key={i}
-              className="relative w-96 h-64 shrink-0 bg-gray-300"
+              className="relative w-96 h-64 max-md:w-60 max-md:h-40 shrink-0 bg-gray-300"
             >
               <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
                 {img}

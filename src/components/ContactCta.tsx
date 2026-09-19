@@ -1,6 +1,6 @@
 export default function ContactCta() {
   return (
-    <section className="min-h-screen flex items-center px-6 bg-white">
+    <section className="section-divider min-h-screen flex items-center px-6 bg-white">
       <div className="max-w-3xl mx-auto">
         <a
           href="/contact"

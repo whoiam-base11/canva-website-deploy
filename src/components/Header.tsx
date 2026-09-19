@@ -33,16 +33,16 @@ export default function Header({
   const textColor = scrolled ? "text-black" : "text-white";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 px-15 transition-all duration-300 ${scrolled ? "bg-white pt-6 pb-3" : "py-24"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 px-15 max-md:px-4 transition-all duration-300 ${scrolled ? "bg-white pt-6 pb-3" : "py-24 max-md:py-6"}`}>
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <a href="/" className="flex items-center gap-2">
           <span
-            className={`${textColor} text-[36px] font-bold tracking-widest`}
+            className={`${textColor} text-[36px] max-md:text-2xl font-bold tracking-widest`}
           >
             C.I.E.P
           </span>
         </a>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-8 max-md:gap-4">
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -59,7 +59,7 @@ export default function Header({
             className={`${textColor} z-50 relative cursor-pointer`}
             aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
           >
-            {isOpen ? <X size={48} /> : <Menu size={48} />}
+            {isOpen ? <X size={48} className="max-md:!w-8 max-md:!h-8" /> : <Menu size={48} className="max-md:!w-8 max-md:!h-8" />}
           </button>
         </div>
       </div>

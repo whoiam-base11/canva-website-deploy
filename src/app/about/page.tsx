@@ -51,14 +51,14 @@ export default function AboutPage() {
         {sections.map((section, i) => (
           <div key={i}>
             {/* 写真セクション */}
-            <section className="min-h-screen flex items-center justify-center bg-white px-48 py-24 relative">
+            <section className="section-divider min-h-screen flex items-center justify-center bg-white px-48 max-md:px-4 py-24 max-md:py-12 relative">
               {i === 0 && (
-                <div className="absolute top-36 left-36 flex flex-col">
+                <div className="absolute top-36 max-md:top-20 left-36 max-md:left-4 flex flex-col">
                   <span className="text-xl text-black">想い-</span>
                   <span className="text-[1.875rem] font-bold text-black">Message</span>
                 </div>
               )}
-              <div className="relative w-[84%] h-[28.8rem] mx-auto bg-gradient-to-b from-sky-200 via-green-300 to-green-500">
+              <div className="relative w-[84%] max-md:w-full h-[28.8rem] max-md:h-[16rem] mx-auto bg-gradient-to-b from-sky-200 via-green-300 to-green-500">
                 <span className="absolute inset-0 flex items-center justify-center text-white/60 text-lg">
                   {section.image}
                 </span>
@@ -66,12 +66,12 @@ export default function AboutPage() {
             </section>
 
             {/* テキストセクション */}
-            <section className="min-h-screen flex items-center justify-center px-6 bg-white">
-              <div className="py-24">
-                <h2 className="text-[1.2rem] md:text-[1.8rem] font-bold text-black leading-relaxed mb-12">
+            <section className="section-divider min-h-screen max-md:min-h-0 flex items-center justify-center px-6 max-md:px-4 bg-white">
+              <div className="py-24 max-md:py-12">
+                <h2 className="text-[1.2rem] md:text-[1.8rem] font-bold text-black leading-relaxed mb-12 max-md:mb-6">
                   {section.heading}
                 </h2>
-                <div className="space-y-6 text-lg text-black leading-snug whitespace-pre-line">
+                <div className="space-y-6 text-lg max-md:text-base text-black leading-snug whitespace-pre-line">
                   {section.paragraphs.map((p, j) => (
                     <p key={j}>{p}</p>
                   ))}
@@ -82,7 +82,7 @@ export default function AboutPage() {
         ))}
 
         {/* Credits */}
-        <section className="py-24 px-6 bg-white">
+        <section className="section-divider py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto space-y-8 text-lg text-black leading-snug whitespace-pre-line">
             <p>【写真】馬場わかな<br />もくじ<br />第1話（3月30日） 何気ない街の風景に、自分だけの「特別」を見つける。そんな寄り道の余白に惹かれました（ZINEクリエイター・夏目紬さん）<br />第2話（3月31日） ファインダー越しに学んだ「待つこと」の大切さとは？（ZINEクリエイター・夏目紬さん）<br />第3話（4月1日） 日常を面白がるのも、味わうのも、少しだけ視点をずらすことです（ZINEクリエイター・夏目紬さん）</p>
             <p>夏目 紬（なつめ つむぎ） 1998年生まれ。神奈川県出身。大学卒業後、IT企業での勤務を経て、2021年よりフリーランスの写真家・ZINEクリエイターとして活動を開始。何気ない街の風景とエッセイを交えたZINE『交差点とコーヒー』シリーズがSNS等で話題を集める。都内を中心に個展も開催。2026年秋、初の単行本エッセイを出版予定。 Instagram：@tsumugi_n_everyday</p>
@@ -90,18 +90,18 @@ export default function AboutPage() {
         </section>
 
         {/* Contact */}
-        <section className="py-12 px-6 bg-white flex justify-center">
+        <section className="section-divider py-12 px-6 max-md:px-4 bg-white flex justify-center">
           <a
             href="/contact"
-            className="border-2 border-black w-[59.4rem] h-[11rem] pl-12 pr-12 text-black bg-gray-100 inline-flex items-center gap-6 transition-transform duration-200 hover:scale-95"
+            className="border-2 border-black w-[59.4rem] max-md:w-full h-[11rem] max-md:h-auto max-md:py-6 pl-12 pr-12 max-md:pl-4 max-md:pr-4 text-black bg-gray-100 inline-flex max-md:flex-col items-center gap-6 max-md:gap-4 transition-transform duration-200 hover:scale-95"
           >
-            <div className="flex flex-col gap-4">
-              <span className="text-5xl font-bold">contact</span>
-              <span className="text-2xl">お問い合わせはこちら</span>
+            <div className="flex flex-col gap-4 max-md:gap-2">
+              <span className="text-5xl max-md:text-2xl font-bold">contact</span>
+              <span className="text-2xl max-md:text-base">お問い合わせはこちら</span>
             </div>
-            <span className="text-2xl text-left self-end mb-10">企業様や取材のご依頼は<br />こちらより気軽にお問い合わせください。</span>
-            <span className="ml-auto bg-black rounded-full w-14 h-14 flex items-center justify-center shrink-0">
-              <span className="text-white text-3xl font-bold leading-none" style={{ WebkitTextStroke: "2px white" }}>→</span>
+            <span className="text-2xl max-md:text-sm text-left self-end mb-10 max-md:self-auto max-md:mb-0">企業様や取材のご依頼は<br />こちらより気軽にお問い合わせください。</span>
+            <span className="ml-auto max-md:ml-0 bg-black rounded-full w-14 h-14 max-md:w-10 max-md:h-10 flex items-center justify-center shrink-0">
+              <span className="text-white text-3xl max-md:text-xl font-bold leading-none" style={{ WebkitTextStroke: "2px white" }}>→</span>
             </span>
           </a>
         </section>

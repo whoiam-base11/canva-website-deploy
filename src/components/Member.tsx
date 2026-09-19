@@ -1,29 +1,29 @@
 export default function Member() {
   return (
-    <section id="member" className="relative min-h-screen flex items-center px-6 bg-white">
-      <h2 className="absolute top-[5vh] left-18 text-2xl font-bold text-gray-800">Member</h2>
-      <div className="max-w-4xl ml-[15%] mr-auto">
+    <section id="member" className="section-divider relative min-h-screen flex items-center px-6 max-md:px-4 bg-white">
+      <h2 className="absolute top-[5vh] left-18 max-md:left-4 text-2xl font-bold text-gray-800">Member</h2>
+      <div className="max-w-4xl ml-[15%] mr-auto max-md:ml-0 max-md:mx-auto max-md:mt-[12vh]">
         <div className="relative">
-          <div className="flex items-start gap-16">
+          <div className="flex items-start gap-16 max-md:flex-col max-md:items-center max-md:gap-8">
             {/* 画像プレースホルダー - 実画像配置時は next/image の <Image> に差し替え */}
-            <div className="relative w-[413px] h-[517px] shrink-0 bg-gray-300">
+            <div className="relative w-[413px] h-[517px] shrink-0 bg-gray-300 max-md:w-full max-md:max-w-[280px] max-md:h-[350px]">
               <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
                 profile.jpg
               </span>
             </div>
             {/* 右側: テキスト */}
-            <div className="flex flex-col gap-12">
-              <p className="text-[27px] font-bold text-gray-900 whitespace-nowrap">
+            <div className="flex flex-col gap-12 max-md:gap-6 max-md:items-center max-md:text-center">
+              <p className="text-[27px] max-md:text-lg font-bold text-gray-900 whitespace-nowrap">
                 C.I.E.P 代表取締役/CEO
               </p>
-              <h3 className="text-5xl font-bold text-gray-800 whitespace-nowrap">本多 真雄人</h3>
-              <p className="text-2xl text-gray-600 leading-relaxed">
+              <h3 className="text-5xl max-md:text-3xl font-bold text-gray-800 whitespace-nowrap">本多 真雄人</h3>
+              <p className="text-2xl max-md:text-base text-gray-600 leading-relaxed">
                 〇〇〇
               </p>
             </div>
           </div>
           {/* SNS・ボタン: 画像の右側・下揃え固定 */}
-          <div className="absolute left-[477px] bottom-0 flex items-center gap-8">
+          <div className="absolute left-[477px] bottom-0 flex items-center gap-8 max-md:relative max-md:left-0 max-md:mt-8 max-md:justify-center max-md:flex-wrap">
             <a
               href="/instagram"
               className="text-gray-500 hover:text-gray-800 transition-colors"

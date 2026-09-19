@@ -9,8 +9,17 @@ import News from "@/components/News";
 import Outline from "@/components/Outline";
 import Message from "@/components/Message";
 import Footer from "@/components/Footer";
+import { getServices, getReports, getNews } from "@/sanity/queries";
 
-export default function Home() {
+const CLIENT_ID = process.env.NEXT_PUBLIC_SANITY_CLIENT_ID || "ciep";
+
+export default async function Home() {
+  const [services, reports, newsItems] = await Promise.all([
+    getServices(CLIENT_ID),
+    getReports(CLIENT_ID),
+    getNews(CLIENT_ID),
+  ]);
+
   return (
     <>
       <Header />
@@ -18,10 +27,10 @@ export default function Home() {
         <Hero />
         <Philosophy />
         <Gallery />
-        <Services />
+        <Services services={services} />
         <Member />
-        <Report />
-        <News />
+        <Report reports={reports} />
+        <News newsItems={newsItems} />
         <Outline />
         <Message />
       </main>

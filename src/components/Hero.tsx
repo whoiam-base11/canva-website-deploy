@@ -13,7 +13,7 @@ export default function Hero() {
         priority
       />
       <div className="absolute inset-0 bg-black/50" />
-      <div className="relative z-10 px-16 pb-24 md:px-24 md:pb-36">
+      <div className="relative z-10 px-16 pb-24 md:px-24 md:pb-36 max-md:px-4 max-md:pb-20">
         <p className="mb-12 -ml-4 text-[24px] sm:text-[27px] font-bold text-white tracking-widest">
           「感情」と「欲」の
         </p>
@@ -28,7 +28,7 @@ export default function Hero() {
         </p>
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-        <span className="text-[36px] text-white tracking-widest">Scroll</span>
+        <span className="text-[36px] max-md:text-xl text-white tracking-widest">Scroll</span>
         <ChevronDown size={32} className="text-white animate-bounce" />
       </div>
     </section>

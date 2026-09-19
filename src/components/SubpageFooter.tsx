@@ -35,7 +35,7 @@ export default function SubpageFooter() {
   };
 
   return (
-    <footer className="py-16 px-6 bg-white border-t border-gray-200">
+    <footer className="section-divider py-16 px-6 bg-white border-t border-gray-200">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16">
           <div className="text-xl font-bold tracking-widest text-gray-900">

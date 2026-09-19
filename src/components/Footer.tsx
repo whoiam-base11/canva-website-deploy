@@ -6,31 +6,31 @@ export default function Footer() {
   };
 
   return (
-    <footer className="min-h-screen px-6 bg-white text-gray-900 flex flex-col justify-center relative">
-      <div className="absolute top-[15vh] left-18 text-4xl font-bold tracking-widest">C.I.E.P</div>
-      <div className="absolute top-[15vh] flex gap-24 left-[45%]">
+    <footer className="section-divider min-h-screen px-6 max-md:px-4 bg-white text-gray-900 flex flex-col justify-center relative">
+      <div className="absolute top-[15vh] left-18 max-md:left-4 text-4xl max-md:text-2xl font-bold tracking-widest">C.I.E.P</div>
+      <div className="absolute top-[15vh] flex gap-24 left-[45%] max-md:relative max-md:top-0 max-md:left-0 max-md:flex-col max-md:gap-10 max-md:mt-[25vh] max-md:px-4">
         {/* 1列目: ページ項目 */}
-        <div className="flex flex-col gap-8">
-          <a href="/" className="text-[22px] hover:opacity-60 transition-opacity">Top</a>
-          <a href="/mission" className="text-[22px] hover:opacity-60 transition-opacity">Mission</a>
-          <a href="/about" className="text-[22px] hover:opacity-60 transition-opacity">About</a>
-          <a href="/service" className="text-[22px] hover:opacity-60 transition-opacity">Service</a>
-          <a href="/news" className="text-[22px] hover:opacity-60 transition-opacity">News</a>
+        <div className="flex flex-col gap-8 max-md:gap-4">
+          <a href="/" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">Top</a>
+          <a href="/mission" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">Mission</a>
+          <a href="/about" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">About</a>
+          <a href="/service" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">Service</a>
+          <a href="/news" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">News</a>
         </div>
         {/* 2列目: SNS */}
-        <div className="flex flex-col gap-8">
-          <a href="/instagram" className="text-[22px] hover:opacity-60 transition-opacity">Instagram</a>
-          <a href="/x" className="text-[22px] hover:opacity-60 transition-opacity">X</a>
-          <a href="/note" className="text-[22px] hover:opacity-60 transition-opacity">note</a>
-          <a href="/youtube" className="text-[22px] hover:opacity-60 transition-opacity">YouTube</a>
+        <div className="flex flex-col gap-8 max-md:gap-4">
+          <a href="/instagram" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">Instagram</a>
+          <a href="/x" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">X</a>
+          <a href="/note" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">note</a>
+          <a href="/youtube" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">YouTube</a>
         </div>
         {/* 3列目: その他 */}
-        <div className="flex flex-col gap-8">
-          <a href="/contact" className="text-[22px] hover:opacity-60 transition-opacity">お問い合わせ</a>
-          <a href="/privacy" className="text-[22px] hover:opacity-60 transition-opacity">個人情報保護</a>
-          <a href="/privacy-policy" className="text-[22px] hover:opacity-60 transition-opacity">個人情報のお取り扱いについて</a>
-          <a href="/social-media-guidelines" className="text-[22px] hover:opacity-60 transition-opacity">ソーシャルメディアガイドライン</a>
-          <a href="/terms" className="text-[22px] hover:opacity-60 transition-opacity">サイトご利用上の注意</a>
+        <div className="flex flex-col gap-8 max-md:gap-4">
+          <a href="/contact" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">お問い合わせ</a>
+          <a href="/privacy" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">個人情報保護</a>
+          <a href="/privacy-policy" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">個人情報のお取り扱いについて</a>
+          <a href="/social-media-guidelines" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">ソーシャルメディアガイドライン</a>
+          <a href="/terms" className="text-[22px] max-md:text-base hover:opacity-60 transition-opacity">サイトご利用上の注意</a>
         </div>
       </div>
       <button

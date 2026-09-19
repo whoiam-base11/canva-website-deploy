@@ -47,8 +47,8 @@ export default function MissionPage() {
       <main>
         {/* Hero */}
         <section className="min-h-screen pt-24 pb-5 px-3 bg-white flex flex-col justify-center">
-          <div className="w-full pl-24">
-            <h1 className="text-[1.8rem] md:text-[3.6rem] font-bold text-gray-900 leading-tight tracking-wide whitespace-nowrap">
+          <div className="w-full pl-24 max-md:pl-4">
+            <h1 className="text-[1.8rem] md:text-[3.6rem] font-bold text-gray-900 leading-tight tracking-wide whitespace-nowrap max-md:whitespace-normal">
               人の手で「表現」と「挑戦」に革新を。
             </h1>
           </div>
@@ -58,7 +58,7 @@ export default function MissionPage() {
               {[...galleryImages, ...galleryImages].map((img, i) => (
                 <div
                   key={i}
-                  className="relative w-96 h-64 shrink-0 bg-gray-300"
+                  className="relative w-96 h-64 max-md:w-60 max-md:h-40 shrink-0 bg-gray-300"
                 >
                   <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
                     {img.alt}
@@ -70,15 +70,15 @@ export default function MissionPage() {
         </section>
 
         {/* Mission */}
-        <section className="min-h-screen py-24 px-6 bg-white overflow-hidden flex flex-col justify-center relative">
-          <div className="pl-[4.2rem]">
-            <p className="text-[2.7rem] text-black font-bold mb-6">-MISSION</p>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-relaxed mb-16">
+        <section className="section-divider min-h-screen py-24 max-md:py-12 px-6 max-md:px-4 bg-white overflow-hidden flex flex-col justify-center relative">
+          <div className="pl-[4.2rem] max-md:pl-0">
+            <p className="text-[2.7rem] max-md:text-2xl text-black font-bold mb-6">-MISSION</p>
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-relaxed mb-16 max-md:mb-8">
               表現に「リアル」を。
               <br />
               日常に「挑戦」を。
             </h2>
-            <div className="space-y-4 text-[1.46rem] text-black leading-relaxed">
+            <div className="space-y-4 text-[1.46rem] max-md:text-base text-black leading-relaxed">
               <p>
                 届けたい想いも、伝えたい世界観も、飾らなければ意味がない。
                 <br />
@@ -106,15 +106,15 @@ export default function MissionPage() {
         </section>
 
         {/* Vision */}
-        <section className="min-h-screen py-24 px-6 bg-white overflow-hidden flex flex-col justify-center relative">
-          <div className="pl-[4.2rem]">
-            <p className="text-[2.7rem] text-black font-bold mb-6">-VISION</p>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-relaxed mb-16">
+        <section className="section-divider min-h-screen py-24 max-md:py-12 px-6 max-md:px-4 bg-white overflow-hidden flex flex-col justify-center relative">
+          <div className="pl-[4.2rem] max-md:pl-0">
+            <p className="text-[2.7rem] max-md:text-2xl text-black font-bold mb-6">-VISION</p>
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-relaxed mb-16 max-md:mb-8">
               全人類が「リアル」を表現し、
               <br />
               「挑戦」が常態化した世界を創る。
             </h2>
-            <div className="space-y-4 text-[1.46rem] text-black leading-relaxed">
+            <div className="space-y-4 text-[1.46rem] max-md:text-base text-black leading-relaxed">
               <p>
                 誰もが「リアル」を隠さずに表現できる世界。
                 <br />
@@ -137,9 +137,9 @@ export default function MissionPage() {
         </section>
 
         {/* C.I.E.P Value */}
-        <section className="min-h-screen py-16 px-6 bg-black text-white flex flex-col relative">
-          <p className="absolute top-20 left-32 text-4xl text-white font-bold">-C.I.E.P Value</p>
-          <div className="max-w-5xl mx-auto mt-40">
+        <section className="section-divider min-h-screen py-16 max-md:py-12 px-6 max-md:px-4 bg-black text-white flex flex-col relative">
+          <p className="absolute max-md:relative top-20 max-md:top-0 left-32 max-md:left-0 text-4xl max-md:text-2xl text-white font-bold">-C.I.E.P Value</p>
+          <div className="max-w-5xl mx-auto mt-40 max-md:mt-12">
             <div className="grid md:grid-cols-2 gap-x-16 gap-y-[2.7rem]">
               {values.map((v) => (
                 <div key={v.en}>
@@ -161,18 +161,18 @@ export default function MissionPage() {
         <Outline />
 
         {/* Contact */}
-        <section className="py-12 px-6 bg-white flex justify-center">
+        <section className="section-divider py-12 px-6 max-md:px-4 bg-white flex justify-center">
           <a
             href="/contact"
-            className="border-2 border-black w-[59.4rem] h-[11rem] pl-12 pr-12 text-black bg-gray-100 inline-flex items-center gap-6 transition-transform duration-200 hover:scale-95"
+            className="border-2 border-black w-[59.4rem] max-md:w-full h-[11rem] max-md:h-auto max-md:py-6 pl-12 pr-12 max-md:pl-4 max-md:pr-4 text-black bg-gray-100 inline-flex max-md:flex-col items-center gap-6 max-md:gap-4 transition-transform duration-200 hover:scale-95"
           >
-            <div className="flex flex-col gap-4">
-              <span className="text-5xl font-bold">contact</span>
-              <span className="text-2xl">お問い合わせはこちら</span>
+            <div className="flex flex-col gap-4 max-md:gap-2">
+              <span className="text-5xl max-md:text-2xl font-bold">contact</span>
+              <span className="text-2xl max-md:text-base">お問い合わせはこちら</span>
             </div>
-            <span className="text-2xl text-left self-end mb-10">企業様や取材のご依頼は<br />こちらより気軽にお問い合わせください。</span>
-            <span className="ml-auto bg-black rounded-full w-14 h-14 flex items-center justify-center shrink-0">
-              <span className="text-white text-3xl font-bold leading-none" style={{ WebkitTextStroke: "2px white" }}>→</span>
+            <span className="text-2xl max-md:text-sm text-left self-end mb-10 max-md:self-auto max-md:mb-0">企業様や取材のご依頼は<br />こちらより気軽にお問い合わせください。</span>
+            <span className="ml-auto max-md:ml-0 bg-black rounded-full w-14 h-14 max-md:w-10 max-md:h-10 flex items-center justify-center shrink-0">
+              <span className="text-white text-3xl max-md:text-xl font-bold leading-none" style={{ WebkitTextStroke: "2px white" }}>→</span>
             </span>
           </a>
         </section>

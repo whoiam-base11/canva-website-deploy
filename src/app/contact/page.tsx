@@ -6,43 +6,43 @@ export default function ContactPage() {
     <>
       <Header fixed />
       <main>
-        <section className="min-h-screen pt-32 pb-24 pl-18 pr-6 bg-white">
+        <section className="min-h-screen pt-32 max-md:pt-24 pb-24 pl-18 max-md:pl-4 pr-6 max-md:pr-4 bg-white">
           <div>
-            <p className="text-[1.33rem] text-gray-900 mb-2">お問い合わせ</p>
-            <h1 className="text-4xl font-bold text-gray-900 mb-12">Contact</h1>
-            <form className="space-y-8 max-w-4xl mx-auto">
-              <div className="flex items-center gap-8">
-                <label className="text-2xl font-normal text-gray-800 w-72 shrink-0">会社・団体名（必須）</label>
+            <p className="text-[1.33rem] max-md:text-base text-gray-900 mb-2">お問い合わせ</p>
+            <h1 className="text-4xl max-md:text-2xl font-bold text-gray-900 mb-12 max-md:mb-8">Contact</h1>
+            <form className="space-y-8 max-md:space-y-6 max-w-4xl mx-auto">
+              <div className="flex items-center gap-8 max-md:flex-col max-md:items-start max-md:gap-2">
+                <label className="text-2xl max-md:text-base font-normal text-gray-800 w-72 max-md:w-auto shrink-0">会社・団体名（必須）</label>
                 <input
                   type="text"
-                  className="flex-1 border border-gray-300 px-4 py-4 text-lg rounded-lg"
+                  className="flex-1 max-md:w-full border border-gray-300 px-4 py-4 max-md:py-3 text-lg max-md:text-base rounded-lg"
                 />
               </div>
-              <div className="flex items-center gap-8">
-                <label className="text-2xl font-normal text-gray-800 w-72 shrink-0">ご担当者名（必須）</label>
+              <div className="flex items-center gap-8 max-md:flex-col max-md:items-start max-md:gap-2">
+                <label className="text-2xl max-md:text-base font-normal text-gray-800 w-72 max-md:w-auto shrink-0">ご担当者名（必須）</label>
                 <input
                   type="text"
-                  className="flex-1 border border-gray-300 px-4 py-4 text-lg rounded-lg"
+                  className="flex-1 max-md:w-full border border-gray-300 px-4 py-4 max-md:py-3 text-lg max-md:text-base rounded-lg"
                 />
               </div>
-              <div className="flex items-center gap-8">
-                <label className="text-2xl font-normal text-gray-800 w-72 shrink-0">メールアドレス（必須）</label>
+              <div className="flex items-center gap-8 max-md:flex-col max-md:items-start max-md:gap-2">
+                <label className="text-2xl max-md:text-base font-normal text-gray-800 w-72 max-md:w-auto shrink-0">メールアドレス（必須）</label>
                 <input
                   type="email"
-                  className="flex-1 border border-gray-300 px-4 py-4 text-lg rounded-lg"
+                  className="flex-1 max-md:w-full border border-gray-300 px-4 py-4 max-md:py-3 text-lg max-md:text-base rounded-lg"
                 />
               </div>
-              <div className="flex items-center gap-8">
-                <label className="text-2xl font-normal text-gray-800 w-72 shrink-0">電話番号（必須）</label>
+              <div className="flex items-center gap-8 max-md:flex-col max-md:items-start max-md:gap-2">
+                <label className="text-2xl max-md:text-base font-normal text-gray-800 w-72 max-md:w-auto shrink-0">電話番号（必須）</label>
                 <input
                   type="tel"
-                  className="flex-1 border border-gray-300 px-4 py-4 text-lg rounded-lg"
+                  className="flex-1 max-md:w-full border border-gray-300 px-4 py-4 max-md:py-3 text-lg max-md:text-base rounded-lg"
                 />
               </div>
               <div>
-                <label className="block text-2xl font-normal text-gray-800 mb-4">お問い合わせ内容（必須）</label>
+                <label className="block text-2xl max-md:text-base font-normal text-gray-800 mb-4">お問い合わせ内容（必須）</label>
                 <textarea
-                  className="w-full border border-gray-300 px-4 py-4 text-lg h-48 rounded-lg"
+                  className="w-full border border-gray-300 px-4 py-4 max-md:py-3 text-lg max-md:text-base h-48 rounded-lg"
                 />
               </div>
               <div className="flex justify-center">
