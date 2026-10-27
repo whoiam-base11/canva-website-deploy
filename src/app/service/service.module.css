@@ -1,10 +1,12 @@
 .page {
   color: #000;
   background: #fff;
+  --service-header-height: 90px;
+  padding-top: var(--service-header-height);
   --service-ink: oklch(21% 0.034 264.665);
   --service-gray: oklch(44.6% 0.03 256.802);
 }
-.page :global(.site-header) { position: relative; }
+.page :global(.site-header) { position: fixed; }
 .page :global(.site-footer) { min-height: 908px; }
 .page :global(.site-footer) > div:nth-child(-n + 2) { top: 135px; }
 .page :global(.footer-top) { bottom: 90px; }
@@ -31,8 +33,8 @@
 .platforms { display: flex; flex-wrap: wrap; gap: 12px; }
 .platforms > span { border: 1px solid #000; border-radius: 999px; padding: 6px 20px; background: #fff; font-size: 18px; }
 .mobileCardCatch, .mobilePlatforms, .mobileBreak, .mobileDot { display: none; }
-.detail { position: relative; padding: 120px max(32px, calc((100% - 1200px) / 2)); scroll-margin-top: 24px; }
-.anchor { position: absolute; top: 0; scroll-margin-top: 24px; }
+.detail { position: relative; padding: 120px max(32px, calc((100% - 1200px) / 2)); scroll-margin-top: calc(var(--service-header-height) + 24px); }
+.anchor { position: absolute; top: 0; scroll-margin-top: calc(var(--service-header-height) + 24px); }
 .coaching { min-height: 1720px; }
 .eyebrow { font-size: 43px; font-weight: 700; line-height: 1.4; }
 .detailTitle { margin-top: 12px; font-size: 22px; line-height: 1.5; color: var(--service-gray); }
@@ -109,6 +111,7 @@
   .contactTitle > span { font-size: 20px; }
 }
 @media (max-width: 767px) {
+  .page { --service-header-height: 72px; }
   .page :global(.site-header) { height: 72px; padding: 16px 12px 8px 20px; }
   .page :global(.site-footer) { min-height: 960px; }
   .page :global(.footer-top) { bottom: 0; }
