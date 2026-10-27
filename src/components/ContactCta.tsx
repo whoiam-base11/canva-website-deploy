@@ -2,44 +2,30 @@ import { ArrowRight } from "lucide-react";
 
 export default function ContactCta({ mobileOnly = false }: { mobileOnly?: boolean }) {
   return (
-    <section aria-label="お問い合わせ" className={`shared-contact-cta ${mobileOnly ? "mobile-only-contact-cta" : ""} section-divider min-h-screen flex items-center px-6 bg-white`}>
-      <div className="max-w-3xl mx-auto">
-        <a
-          href="/contact"
-          className="flex items-center justify-between border-2 border-gray-900 p-6 hover:bg-gray-50 transition-colors group"
-        >
-          <div>
-            <span className="text-xl font-bold text-gray-900 tracking-wider">
-              contact
+    <>
+      {!mobileOnly && (
+        <section aria-label="お問い合わせ" className="desktop-contact-cta section-divider py-12 px-6 max-md:px-4 bg-white flex justify-center">
+          <a
+            href="/contact"
+            className="border-2 border-black w-[59.4rem] max-md:w-full h-[11rem] max-md:h-auto max-md:py-6 pl-12 pr-12 max-md:pl-4 max-md:pr-4 text-black bg-gray-100 inline-flex max-md:flex-col items-center gap-6 max-md:gap-4 transition-transform duration-200 hover:scale-95"
+          >
+            <div className="flex flex-col gap-4 max-md:gap-2">
+              <span className="text-5xl max-md:text-2xl font-bold">contact</span>
+              <span className="text-2xl max-md:text-base">お問い合わせはこちら</span>
+            </div>
+            <span className="text-2xl max-md:text-sm text-left self-end mb-10 max-md:self-auto max-md:mb-0">企業様や取材のご依頼は<br />こちらより気軽にお問い合わせください。</span>
+            <span className="ml-auto max-md:ml-0 bg-black rounded-full w-14 h-14 max-md:w-10 max-md:h-10 flex items-center justify-center shrink-0">
+              <span className="text-white text-3xl max-md:text-xl font-bold leading-none" style={{ WebkitTextStroke: "2px white" }}>→</span>
             </span>
-            <p className="text-xs text-gray-500 mt-1">
-              お問い合わせはこちら
-            </p>
-          </div>
-          <div className="flex items-center gap-4">
-            <p className="text-sm text-gray-600 hidden md:block">
-              企業様や取材のご依頼は
-              <br />
-              こちらより気軽にお問い合わせください。
-            </p>
-            <span className="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center group-hover:bg-gray-700 transition-colors">
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M4 12h15M13 6l6 6-6 6" />
-              </svg>
-            </span>
-          </div>
+          </a>
+        </section>
+      )}
+      <section aria-label="お問い合わせ" className="shared-contact-cta mobile-only-contact-cta section-divider bg-white">
+        <a href="/contact" className="mobile-contact-link">
+          <span className="mobile-contact-heading"><strong>contact</strong><span>お問い合わせはこちら</span></span>
+          <span className="mobile-contact-bottom"><span>企業様や取材のご依頼は<br />こちらより気軽にお問い合わせください。</span><span className="mobile-contact-arrow"><ArrowRight aria-hidden="true" /></span></span>
         </a>
-      </div>
-      <a href="/contact" className="mobile-contact-link">
-        <span className="mobile-contact-heading"><strong>contact</strong><span>お問い合わせはこちら</span></span>
-        <span className="mobile-contact-bottom"><span>企業様や取材のご依頼は<br />こちらより気軽にお問い合わせください。</span><span className="mobile-contact-arrow"><ArrowRight aria-hidden="true" /></span></span>
-      </a>
-    </section>
+      </section>
+    </>
   );
 }

@@ -3,10 +3,11 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function ContentPage({ title, label, children }: {
+export default function ContentPage({ title, label, children, contactSection }: {
   title: string;
   label: string;
   children: ReactNode;
+  contactSection?: ReactNode;
 }) {
   return (
     <>
@@ -20,9 +21,11 @@ export default function ContentPage({ title, label, children }: {
           <h1>{title}</h1>
         </div>
         {children}
-        <div className="content-contact">
-          <Link href="/contact"><span>お問い合わせはこちら</span><span aria-hidden="true">→</span></Link>
-        </div>
+        {contactSection ?? (
+          <div className="content-contact">
+            <Link href="/contact"><span>お問い合わせはこちら</span><span aria-hidden="true">→</span></Link>
+          </div>
+        )}
       </main>
       <Footer />
     </>
