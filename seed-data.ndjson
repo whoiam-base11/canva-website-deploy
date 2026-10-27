@@ -1,0 +1,10 @@
+{"_type":"service","_id":"service-1","clientId":"ciep","title":"コーチング・サポート事業","description":"ユーザーインタビューやアンケート調査を通じて、ターゲットユーザーの本質的なニーズを明らかにします。データに基づいた意思決定をサポートします。","order":1}
+{"_type":"service","_id":"service-2","clientId":"ciep","title":"SNS構築・運用支援事業","description":"企業サイトやランディングページの制作から、既存サイトの更新・保守運用まで。ビジネスの成長を支えるWebソリューションを提供します。","order":2}
+{"_type":"report","_id":"report-1","clientId":"ciep","title":"レポートタイトル1","description":"プロジェクトの進捗と成果についてのレポートです。","order":1}
+{"_type":"report","_id":"report-2","clientId":"ciep","title":"レポートタイトル2","description":"市場調査の結果をまとめたレポートです。","order":2}
+{"_type":"report","_id":"report-3","clientId":"ciep","title":"レポートタイトル3","description":"新規事業の戦略提案レポートです。","order":3}
+{"_type":"report","_id":"report-4","clientId":"ciep","title":"レポートタイトル4","description":"クライアント満足度調査の結果レポートです。","order":4}
+{"_type":"report","_id":"report-5","clientId":"ciep","title":"レポートタイトル5","description":"年間活動の振り返りと展望レポートです。","order":5}
+{"_type":"news","_id":"news-1","clientId":"ciep","date":"2024-12-01","title":"HPをリニューアルしました。","body":"新たなスタートとしてこちらのページをご覧ください。\n引き続きC.E.I.Pをよろしくお願いいたします。","links":[{"_type":"object","_key":"link1a","label":"→ 記事の詳細はこちら","href":"/news/1"},{"_type":"object","_key":"link1b","label":"→ インタビュー映像（YouTube）はこちら","href":"/news/1/video"}]}
+{"_type":"news","_id":"news-2","clientId":"ciep","date":"2024-11-15","title":"HPをリニューアルしました。","body":"新たなスタートとしてこちらのページをご覧ください。\n引き続きC.E.I.Pをよろしくお願いいたします。","links":[{"_type":"object","_key":"link2a","label":"→ 記事の詳細はこちら","href":"/news/2"},{"_type":"object","_key":"link2b","label":"→ インタビュー映像（YouTube）はこちら","href":"/news/2/video"}]}
+{"_type":"news","_id":"news-3","clientId":"ciep","date":"2024-10-01","title":"HPをリニューアルしました。","body":"新たなスタートとしてこちらのページをご覧ください。\n引き続きC.E.I.Pをよろしくお願いいたします。","links":[{"_type":"object","_key":"link3a","label":"→ 記事の詳細はこちら","href":"/news/3"},{"_type":"object","_key":"link3b","label":"→ インタビュー映像（YouTube）はこちら","href":"/news/3/video"}]}

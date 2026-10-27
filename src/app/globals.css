@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --navy: #1a1a2e;
+  --navy-light: #2d2d44;
+  --accent: #c4a265;
+  --values-bg: #d4a574;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-accent: var(--accent);
+  --color-values-bg: var(--values-bg);
+  --font-sans: var(--font-noto-sans-jp);
+  --font-mono: var(--font-geist-mono);
+  --animate-marquee: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.section-divider {
+  box-shadow: inset 0 12px 16px -12px rgba(0, 0, 0, 0.08);
+}
+
+/* Shared page layouts and the 390px mobile design reference. */
+.mobile-break { display: none; }
+.message-copy { display: flex; flex-direction: column; gap: 28px; }
+.menu-toggle { display: flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; }
+.menu-panel { min-height: 100svh; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+.content-page { padding-top: 160px; color: #1f2937; }
+.content-page-heading { max-width: 1152px; margin: 0 auto; padding: 32px 48px 72px; }
+.content-breadcrumb { display: flex; gap: 16px; margin-bottom: 56px; font-size: 14px; color: #6b7280; }
+.content-page-heading > p { font-size: 16px; margin-bottom: 8px; }
+.content-page-heading h1 { font-size: 56px; font-weight: 700; line-height: 1.2; }
+.content-page .content-listing { min-height: 0; padding: 64px 48px 80px; }
+.content-listing .services-grid { gap: 64px 48px; }
+.content-listing .service-card h3 { margin-top: 24px; font-size: 24px; }
+.service-description { width: 100%; max-width: 480px; margin-top: 24px; font-size: 17px; line-height: 1.9; white-space: pre-line; overflow-wrap: anywhere; }
+.content-listing .report-scroll { max-width: 1056px; overflow: visible; }
+.content-listing .report-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 48px; width: 100%; padding: 0; }
+.content-listing .report-card { width: 100%; min-width: 0; }
+.content-listing .report-image { margin-bottom: 16px; }
+.content-listing .news-content { max-width: 1056px; width: 100%; margin: 0 auto; }
+.content-listing .news-content > div { max-width: none; width: 100%; }
+.content-listing .news-item { gap: 64px; padding: 32px 0; }
+.content-listing .news-item time { font-size: 18px; }
+.news-item { overflow-wrap: anywhere; }
+.content-listing.home-outline { display: flex; flex-direction: column; align-items: stretch; gap: 32px; }
+.content-listing.home-outline h2 { position: static; max-width: 1056px; width: 100%; margin: 0 auto; }
+.content-listing .outline-content { width: 100%; max-width: 1056px; }
+.content-listing.home-outline th, .content-listing.home-outline td { border-bottom: 1px solid #e5e7eb; font-size: 20px; }
+.content-empty { width: 100%; padding: 48px 16px; color: #6b7280; text-align: center; font-size: 16px; }
+.content-contact { max-width: 1152px; margin: 0 auto; padding: 64px 48px 96px; }
+.content-contact a { display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid #1f2937; padding: 28px 32px; font-size: 20px; transition: background .2s; }
+.content-contact a:hover { background: #f9fafb; }
+
+@media (max-width: 767px) {
+  .mobile-break { display: inline; }
+  .site-header { height: 88px; padding: 24px 12px 20px 16px; }
+  .site-header > div { height: 44px; }
+  .site-header .menu-panel nav { gap: 28px; }
+  .home-hero { height: 100svh; min-height: 640px; }
+  .hero-copy { position: absolute; left: 0; right: 0; bottom: 136px; padding: 0 16px; }
+  .hero-copy > p:first-child { margin: 0 0 24px; font-size: 24px; line-height: 1.4; letter-spacing: .1em; }
+  .hero-copy h1 { font-size: 48px; line-height: 1.2; letter-spacing: .05em; }
+  .hero-copy > p:nth-of-type(2) { margin-top: 32px; font-size: 14px; letter-spacing: .1em; }
+  .hero-about { width: fit-content; margin-top: 32px; padding: 8px 0; font-size: 22px; letter-spacing: .1em; }
+  .hero-scroll { bottom: 32px; gap: 4px; }
+  .hero-scroll span { font-size: 20px; letter-spacing: .1em; }
+  .hero-scroll svg { width: 32px !important; height: 32px !important; }
+  .home-philosophy { height: auto; min-height: 844px; padding: 80px 20px; justify-content: center; }
+  .philosophy-copy { width: 100%; }
+  .philosophy-copy > p { font-size: 22px; line-height: 1.625; }
+  .philosophy-copy > div { margin-top: 48px; font-size: 16px; line-height: 1.75; letter-spacing: .025em; }
+  .philosophy-copy > div p + p { margin-top: 24px; }
+  .home-gallery { height: auto; min-height: 960px; padding: 64px 0; justify-content: flex-start; }
+  .gallery-intro { display: flex; flex-direction: column; gap: 40px; padding: 0 16px; }
+  .gallery-main { width: 240px; max-width: 100%; height: 360px; margin: 0 auto; }
+  .gallery-values { width: 304px; max-width: 100%; padding: 0; }
+  .gallery-values > div { max-width: none; margin: 0; gap: 16px; }
+  .gallery-values > div + div { margin-top: 20px; }
+  .gallery-values span { font-size: 24px; line-height: 1.5; }
+  .gallery-values span:first-child { width: 208px; letter-spacing: .1em; }
+  .gallery-values span:last-child { width: 80px; flex-shrink: 0; }
+  .gallery-strip { margin-top: 48px; }
+  .gallery-strip > div { gap: 24px; padding-left: 16px; }
+  .home-services { min-height: 0; padding: 56px 16px 64px; justify-content: flex-start; gap: 32px; }
+  .home-services > h2 { position: static; font-size: 24px; line-height: 1.5; }
+  .services-grid { gap: 56px; }
+  .service-image { width: 100%; aspect-ratio: 3 / 2; }
+  .service-card h3 { margin-top: 24px; font-size: 20px; line-height: 1.5; }
+  .service-detail { margin-top: 24px; padding: 8px 24px; font-size: 18px; line-height: 1.5; }
+  .home-member { min-height: 920px; padding: 56px 16px 64px; flex-direction: column; align-items: stretch; }
+  .home-member > h2 { position: static; font-size: 24px; line-height: 1.5; }
+  .member-content { width: 100%; margin: 40px auto 0; }
+  .member-content > div > div:first-child { gap: 0; }
+  .member-photo { width: 280px; max-width: 100%; height: 350px; aspect-ratio: 4 / 5; }
+  .member-bio { margin-top: 32px; gap: 12px; }
+  .member-bio > p:first-child { font-size: 18px; line-height: 1.5; white-space: normal; }
+  .member-bio h3 { font-size: 30px; line-height: 1.5; }
+  .member-bio > p:last-child { font-size: 16px; line-height: 1.625; }
+  .member-actions { margin-top: 32px; gap: 24px; }
+  .member-actions > div { gap: 24px; }
+  .member-actions > div a { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+  .member-actions svg { width: 40px; height: 40px; }
+  .member-actions > a { width: 280px; max-width: 100%; margin-left: 0; padding: 12px 0; text-align: center; font-size: 18px; line-height: 1.5; }
+  .home-report { min-height: 640px; padding: 56px 0 64px; justify-content: flex-start; align-items: stretch; }
+  .home-report > h2 { position: static; margin: 0; padding: 0 16px; font-size: 24px; line-height: 1.5; gap: 4px; }
+  .home-report > h2 span { font-size: 14px; }
+  .report-scroll { margin-top: 32px; scroll-snap-type: x proximity; scrollbar-width: thin; }
+  .report-grid { gap: 24px; padding: 0 16px; }
+  .report-card { width: 280px; scroll-snap-align: start; }
+  .report-image { margin-bottom: 16px; }
+  .report-card h3 { font-size: 20px; line-height: 1.5; }
+  .report-card p { font-size: 16px; line-height: 1.5; }
+  .report-more { align-self: center; margin-top: auto; padding-top: 32px; font-size: 18px; line-height: 1.5; }
+  .home-news { padding: 56px 16px 64px; }
+  .home-news:has(.news-item:nth-child(3)):not(.content-listing) { min-height: 1240px; }
+  .home-news > h2 { position: static; align-self: flex-end; margin: 0; font-size: 24px; line-height: 1.5; }
+  .news-content { margin: 16px 0 0; }
+  .news-item { padding: 20px 0; gap: 8px; }
+  .news-item time { padding: 0; font-size: 16px; line-height: 1.5; }
+  .news-item h3 { margin-bottom: 8px; font-size: 17px; line-height: 1.6; }
+  .news-body { margin-bottom: 20px; font-size: 17px; line-height: 1.6; }
+  .news-links { gap: 0; }
+  .news-links a { padding: 6px 0; font-size: 17px; line-height: 1.6; }
+  .news-more { align-self: center; margin-top: auto; padding-top: 32px; font-size: 18px; line-height: 1.5; }
+  .home-outline { min-height: 480px; padding: 56px 16px 64px; flex-direction: column; align-items: stretch; gap: 24px; }
+  .home-outline h2 { position: static; margin: 0; text-decoration: none; font-size: 24px; line-height: 1.5; }
+  .outline-content { width: 100%; margin: 0; }
+  .home-outline table { table-layout: fixed; font-size: 16px; line-height: 1.5; }
+  .home-outline th { width: 96px; padding: 16px 16px 16px 0; }
+  .home-outline td { padding: 16px 0; overflow-wrap: anywhere; }
+  .home-outline tr:not(:last-child) { border-bottom: 1px solid #e5e7eb; }
+  .outline-contact { gap: 8px; }
+  .home-message { min-height: 840px; padding: 56px 20px 96px; flex-direction: column; align-items: stretch; gap: 32px; }
+  .home-message h2 { position: static; margin: 0; text-decoration: none; font-size: 24px; line-height: 1.5; }
+  .message-copy { font-size: 15px; line-height: 2; gap: 28px; }
+  .site-footer { min-height: 960px; padding: 72px 20px 64px; justify-content: flex-start; gap: 48px; }
+  .footer-brand { margin-bottom: 48px; font-size: 24px; line-height: 1.5; letter-spacing: .1em; }
+  .footer-pages { gap: 4px 16px; padding-bottom: 32px; }
+  .footer-social { gap: 4px 16px; padding: 32px 0; }
+  .footer-policies { gap: 4px; padding-top: 32px; }
+  .footer-mobile a { display: block; padding: 8px 0; line-height: 1.5; }
+  .footer-mobile .footer-brand { padding: 0; }
+  .footer-policies a { font-size: 14px; }
+  .footer-top { margin: auto auto 0; padding-top: 0; gap: 16px; }
+  .footer-top svg { height: 64px; }
+  .content-page { padding-top: 88px; }
+  .content-page-heading { padding: 24px 16px 48px; }
+  .content-breadcrumb { margin-bottom: 32px; font-size: 13px; }
+  .content-page-heading > p { font-size: 14px; }
+  .content-page-heading h1 { font-size: 36px; }
+  .content-page .content-listing { min-height: 0; padding: 40px 16px 56px; gap: 24px; }
+  .content-listing .services-grid { gap: 56px; }
+  .content-listing .service-card h3 { font-size: 20px; }
+  .service-description { margin-top: 16px; font-size: 16px; }
+  .content-listing .report-scroll { margin: 0; }
+  .content-listing .report-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 0; }
+  .content-listing .report-card { width: 100%; }
+  .content-listing .report-card h3 { font-size: 20px; }
+  .content-listing .news-item { flex-direction: column; gap: 8px; padding: 24px 0; }
+  .content-listing .news-item time { font-size: 16px; }
+  .content-listing.home-outline th, .content-listing.home-outline td { font-size: 16px; }
+  .content-contact { padding: 40px 16px 64px; }
+  .content-contact a { padding: 24px 20px; font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .animate-bounce { animation: none; }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .site-header { padding-left: 32px; padding-right: 32px; }
+  .site-header nav { gap: 20px; }
+  .site-header nav a { font-size: 18px; }
+  .home-member { padding: 120px 32px 80px; }
+  .member-content { width: 100%; max-width: 900px; margin: 0 auto; }
+  .member-content > div > div:first-child { gap: 40px; }
+  .member-photo { width: 40%; height: auto; aspect-ratio: 4 / 5; }
+  .member-bio { gap: 24px; }
+  .member-bio > p:first-child { font-size: 20px; white-space: normal; }
+  .member-bio h3 { font-size: 40px; }
+  .member-actions { position: static; margin-top: 32px; justify-content: flex-end; gap: 24px; }
+  .member-actions > a { margin-left: 0; padding-left: 24px; padding-right: 24px; }
+  .site-footer > div:nth-child(2) { left: 34%; right: 24px; gap: 24px; }
+  .site-footer > div:nth-child(2) > div { min-width: 0; }
+  .site-footer > div:nth-child(2) a { font-size: 16px; overflow-wrap: anywhere; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .site-header > div > div > nav { display: none; }
+}
+
+/* Shared mobile parts from design-reference/design_parts.html. */
+.menu-link-arrow, .mobile-contact-link, .mobile-only-contact-cta, .contact-submit-mobile-arrow { display: none; }
+
+@media (max-width: 767px) {
+  .mobile-static-header { position: relative; height: 72px; padding: 16px 12px 8px 20px; }
+  .site-header.site-header-open { height: 72px; padding: 16px 12px 8px 20px; }
+  .site-header-open .menu-panel { padding-top: 72px; display: block; }
+  .site-header-open .menu-panel nav { width: 100%; padding: 48px 20px 0; align-items: stretch; gap: 0; box-shadow: inset 0 12px 16px -12px #00000014; }
+  .site-header-open .menu-panel nav > a { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #000; font-size: 24px; font-weight: 400; letter-spacing: .05em; line-height: 1.5; }
+  .site-header-open .menu-panel nav > .menu-home { display: none; }
+  .menu-link-arrow { display: inline; font-size: 20px; }
+  .desktop-contact-cta { display: none !important; }
+  .shared-contact-cta { height: 290px; min-height: 290px; padding: 48px 16px; display: block; color: #000; }
+  .mobile-only-contact-cta { display: block; }
+  .shared-contact-cta > div { display: none; }
+  .mobile-contact-link { display: flex; flex-direction: column; gap: 20px; width: 100%; padding: 28px 20px 24px; border: 2px solid #000; background: oklch(96.7% 0.003 264.542); transition: opacity .3s; }
+  .mobile-contact-link:hover { opacity: .6; }
+  .mobile-contact-heading { display: flex; flex-direction: column; gap: 8px; }
+  .mobile-contact-heading strong { font-size: 24px; line-height: 1.3; }
+  .mobile-contact-heading > span { font-size: 16px; line-height: 1.5; }
+  .mobile-contact-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; font-size: 14px; line-height: 1.7; }
+  .mobile-contact-bottom > span:first-child { min-width: 0; }
+  .mobile-contact-arrow { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: #000; color: #fff; }
+  .mobile-contact-arrow svg { width: 20px; height: 20px; stroke-width: 3; }
+  .contact-submit-desktop-arrow { display: none; }
+  .contact-submit-mobile-arrow { display: block; }
+}

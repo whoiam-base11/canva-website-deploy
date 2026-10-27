@@ -1,0 +1,27 @@
+@media (max-width: 767px) {
+  .page { color: #000; }
+  .hero { min-height: 772px; padding: 0 0 40px; overflow: hidden; }
+  .heroHeading { padding: 0 20px; }
+  .heroHeading h1 { font-size: 28.8px; line-height: 1.4; letter-spacing: .025em; }
+  .gallery { margin: 64px 0 0; }
+  .galleryTrack { gap: 24px; padding-left: 20px; width: max-content; }
+  .galleryTrack > div { width: 240px; height: 160px; }
+  .statement { min-height: 0; padding: 56px 20px 112px; justify-content: flex-start; }
+  .mission { min-height: 760px; }
+  .vision { min-height: 840px; }
+  .statement > div { padding: 0; }
+  .statement > div > p { margin-bottom: 24px; font-size: 24px; line-height: 1.5; }
+  .statement h2 { margin-bottom: 32px; font-size: 30px; line-height: 1.625; }
+  .statement h2 + div { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.625; }
+  .statement h2 + div > p { margin: 0; }
+  .watermark { right: -8px; bottom: -14px; font-size: 80px; }
+  .values { min-height: 1140px; padding: 56px 20px 64px; }
+  .values > p { position: static; font-size: 24px; line-height: 1.5; }
+  .values > div { width: 100%; margin: 48px 0 0; }
+  .values > div > div { display: flex; flex-direction: column; gap: 44px; }
+  .values > div > div > div { display: flex; flex-direction: column; gap: 20px; }
+  .values > div > div > div > div { gap: 24px; margin: 0; padding-bottom: 12px; border-bottom: 1px solid #ffffff4d; font-size: 24px; line-height: 1.5; }
+  .values span:first-child { width: 192px; }
+  .values span:last-child { width: auto; text-align: left; }
+  .values > div p { font-size: 16px; line-height: 1.8; }
+}
