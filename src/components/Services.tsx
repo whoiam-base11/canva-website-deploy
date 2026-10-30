@@ -3,6 +3,11 @@ import Link from "next/link";
 import { urlFor } from "@/sanity/image";
 import type { SanityService } from "@/sanity/queries";
 
+const fallbackImages: Record<string, string> = {
+  "コーチング・サポート事業": "/images/image-1.png",
+  "SNS構築・運用支援事業": "/images/image-6.png",
+};
+
 export default function Services({ services, listing = false }: {
   services: SanityService[];
   listing?: boolean;
@@ -17,6 +22,8 @@ export default function Services({ services, listing = false }: {
               <div className="service-image relative aspect-[3/2] w-[96%] max-md:w-full bg-gray-300">
                 {service.image ? (
                   <Image src={urlFor(service.image).width(800).height(533).url()} alt={service.title} fill sizes="(max-width: 767px) calc(100vw - 32px), 480px" className="object-cover" />
+                ) : fallbackImages[service.title] ? (
+                  <Image src={fallbackImages[service.title]} alt={service.title} fill sizes="(max-width: 767px) calc(100vw - 32px), 480px" className="object-cover" />
                 ) : <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">No Image</span>}
               </div>
               <h3 className="mt-16 max-md:mt-6 text-[31px] max-md:text-xl font-bold text-gray-800 text-center">{service.title}</h3>

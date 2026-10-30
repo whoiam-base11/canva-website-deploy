@@ -3,6 +3,14 @@ import Link from "next/link";
 import { urlFor } from "@/sanity/image";
 import type { SanityReport } from "@/sanity/queries";
 
+const fallbackImages = [
+  "/images/image-1.png",
+  "/images/image-2.png",
+  "/images/image-3.png",
+  "/images/image-4.png",
+  "/images/image-5.png",
+];
+
 export default function Report({ reports, listing = false }: {
   reports: SanityReport[];
   listing?: boolean;
@@ -17,6 +25,8 @@ export default function Report({ reports, listing = false }: {
               <div className="report-image relative aspect-[16/10] bg-gray-300 mb-4 max-md:mb-2">
                 {report.image ? (
                   <Image src={urlFor(report.image).width(830).height(519).url()} alt={report.title} fill sizes="(max-width: 767px) 280px, 415px" className="object-cover" />
+                ) : fallbackImages[report.order - 1] ? (
+                  <Image src={fallbackImages[report.order - 1]} alt={report.title} fill sizes="(max-width: 767px) 280px, 415px" className="object-cover" />
                 ) : <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">No Image</span>}
               </div>
               <h3 className="text-xl max-md:text-base font-bold text-gray-800 mb-1">{report.title}</h3>

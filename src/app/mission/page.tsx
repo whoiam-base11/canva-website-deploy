@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Header from "@/components/Header";
 import Outline from "@/components/Outline";
 import Footer from "@/components/Footer";
@@ -7,12 +8,11 @@ import ContactCta from "@/components/ContactCta";
 import styles from "./mission.module.css";
 
 const galleryImages = [
-  { src: "/images/mission-gallery-1.jpg", alt: "活動写真1" },
-  { src: "/images/mission-gallery-2.jpg", alt: "活動写真2" },
-  { src: "/images/mission-gallery-3.jpg", alt: "活動写真3" },
-  { src: "/images/mission-gallery-4.jpg", alt: "活動写真4" },
-  { src: "/images/mission-gallery-5.jpg", alt: "活動写真5" },
-  { src: "/images/mission-gallery-6.jpg", alt: "活動写真6" },
+  { src: "/images/image-1.png", alt: "活動写真1" },
+  { src: "/images/image-2.png", alt: "活動写真2" },
+  { src: "/images/image-3.png", alt: "活動写真3" },
+  { src: "/images/image-4.png", alt: "活動写真4" },
+  { src: "/images/image-5.png", alt: "活動写真5" },
 ];
 
 const values = [
@@ -60,11 +60,15 @@ export default function MissionPage() {
               {[...galleryImages, ...galleryImages].map((img, i) => (
                 <div
                   key={i}
-                  className="relative w-96 h-64 max-md:w-60 max-md:h-40 shrink-0 bg-gray-300"
+                  className="relative w-96 h-64 max-md:w-60 max-md:h-40 shrink-0 overflow-hidden"
                 >
-                  <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
-                    {img.alt}
-                  </span>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 240px, 384px"
+                  />
                 </div>
               ))}
             </div>

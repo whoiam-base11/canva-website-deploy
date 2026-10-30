@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const values = [
   { en: "Challenge", ja: "挑戦" },
   { en: "Innovation", ja: "革新" },
@@ -6,12 +8,12 @@ const values = [
 ];
 
 const marqueeImages = [
-  "gallery-1.jpg",
-  "gallery-2.jpg",
-  "gallery-3.jpg",
-  "gallery-4.jpg",
-  "gallery-5.jpg",
-  "gallery-6.jpg",
+  "image-1.png",
+  "image-2.png",
+  "image-3.png",
+  "image-4.png",
+  "image-5.png",
+  "image-6.png",
 ];
 
 export default function Gallery() {
@@ -47,11 +49,15 @@ export default function Gallery() {
           {[...marqueeImages, ...marqueeImages].map((img, i) => (
             <div
               key={i}
-              className="relative w-96 h-64 max-md:w-60 max-md:h-40 shrink-0 bg-gray-300"
+              className="relative w-96 h-64 max-md:w-60 max-md:h-40 shrink-0 overflow-hidden"
             >
-              <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
-                {img}
-              </span>
+              <Image
+                src={`/images/${img}`}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 240px, 384px"
+              />
             </div>
           ))}
         </div>

@@ -23,7 +23,7 @@ export default function Hero() {
         <p className="mt-12 max-md:mt-6 text-[14px] sm:text-[19px] max-md:text-sm text-white tracking-widest">
           A top Emotion and Desire
         </p>
-        <a href="/about" className="hero-about block mt-12 max-md:mt-8 text-[24px] sm:text-[27px] max-md:text-lg text-white tracking-widest">
+        <a href="/mission" className="hero-about block mt-12 max-md:mt-8 text-[24px] sm:text-[27px] max-md:text-lg text-white tracking-widest">
           About C.I.E.P →
         </a>
       </div>
